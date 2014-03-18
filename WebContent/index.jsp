@@ -12,7 +12,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>SISTEMA INTEGRAL MEDICO ADMINISTRATIVO</title>
+    <title>BOLSA DE TRABAJO UM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -81,7 +81,7 @@
         <table class="table table-condensed table-striped">
             <tr>
                 <td>
-                    SISTEMA INTEGRAL MEDICO ADMINISTRATIVO
+                    BOLSA DE TRABAJO UM
                 </td>
             </tr>
             
@@ -89,7 +89,7 @@
         
         
       <form class="form-signin" action="login.jsp" method="POST">
-        <h2 class="form-signin-heading">LOGIN</h2>
+        <h2 class="form-signin-heading">Identifíquese!</h2>
         <input type="text" class="input-block-level" name="email" placeholder="Email address">
         <input type="password" class="input-block-level" name="password" placeholder="Password">
         <label class="checkbox">

@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SISTEMA INTEGRAL MEDICO ADMINISTRATIVO</title>
+<title>BOLSA DE TRABAJO UM</title>
 
       <!-- Le styles -->
 <link href="images/css/bootstrap.css" rel="stylesheet" media="screen, projection">
@@ -22,11 +22,12 @@
  <div class="container">
 
       <div class="masthead">
-        <h3 class="text-muted">SIMA -SISTEMA INTEGRAL MEDICO ADMINISTRATIVO-</h3>
+        <h3 class="text-muted">BOLSA DE TRABAJO UM</h3>
         <ul class="nav nav-justified">
           <li class="active"><a href="#">Inicio</a></li>
-          <li><a href="inventarios.jsp">Inventarios</a></li>
-          <li><a href="alumnos.jsp">Alumnos</a></li>
+          <li><a href="inventarios.jsp">Usuarios</a></li>
+          <li><a href="alumnos.jsp">Empresas</a></li>
+          <li><a href="alumnos.jsp">Profesiones</a></li>
           <li><a href="#">Administracion</a></li>
           <li><a href="#">Operaciones</a></li>
           <li><a href="#">Salir</a></li>
@@ -62,7 +63,7 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; Universidad de Montemorelos 2014</p>
       </div>
 
     </div> <!-- /container -->
