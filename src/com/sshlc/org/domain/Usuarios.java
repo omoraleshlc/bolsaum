@@ -5,7 +5,8 @@ public class Usuarios {
 	private Integer folio;
 	private String usuario;
 	private String nombre;
-
+        private String aPaterno;
+        private String aMaterno;
     /**
      * @return the folio
      */
@@ -46,6 +47,34 @@ public class Usuarios {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    /**
+     * @return the aPaterno
+     */
+    public String getaPaterno() {
+        return aPaterno;
+    }
+
+    /**
+     * @param aPaterno the aPaterno to set
+     */
+    public void setaPaterno(String aPaterno) {
+        this.aPaterno = aPaterno;
+    }
+
+    /**
+     * @return the aMaterno
+     */
+    public String getaMaterno() {
+        return aMaterno;
+    }
+
+    /**
+     * @param aMaterno the aMaterno to set
+     */
+    public void setaMaterno(String aMaterno) {
+        this.aMaterno = aMaterno;
     }
 	
 

@@ -24,7 +24,7 @@ public class UsuariosController {
         
         
 
-	@RequestMapping("/register")
+	@RequestMapping("/formaInsertarUsuarios")
 	public ModelAndView registerUsuarios(@ModelAttribute Usuarios usuarios) {
 
 		List<String> genderList = new ArrayList<String>();
@@ -48,17 +48,17 @@ public class UsuariosController {
 		map.put("genderList", genderList);
 		map.put("cityList", cityList);
                 map.put("estadoList", estadoList);
-		return new ModelAndView("register", "map", map);
+		return new ModelAndView("agregarUsuarios", "map", map);
 	}
 
-	@RequestMapping("/insert")
+	@RequestMapping("/insertarUsuarios")
 	public String inserData(@ModelAttribute Usuarios usuarios) {
 		if (usuarios != null)
 			usuariosService.insertData(usuarios);
-		return "redirect:/getList";
+		return "redirect:/listaUsuarios";
 	}
 
-	@RequestMapping("/getList")
+	@RequestMapping("/listaUsuarios")
 	public ModelAndView getUsuariosList() {
 		List<Usuarios> usuariosList = usuariosService.getUsuariosList();
 		return new ModelAndView("usuariosList", "usuariosList", usuariosList);

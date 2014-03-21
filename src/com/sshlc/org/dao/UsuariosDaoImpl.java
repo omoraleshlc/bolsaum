@@ -17,14 +17,16 @@ public class UsuariosDaoImpl implements UsuariosDao {
 	public void insertData(Usuarios usuarios) {
 
 		String sql = "INSERT INTO usuarios "
-				+ "(first_name,last_name, gender, city, estado) VALUES (?, ?, ?, ?, ?)";
+				+ "(usuario,nombre, aPaterno, aMaterno) VALUES (?, ?, ?, ?)";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
 		jdbcTemplate.update(
 				sql,
 				new Object[] { usuarios.getUsuario(), usuarios.getNombre(),
-						usuarios.getFolio() });
+						usuarios.getaPaterno(),
+                                usuarios.getaMaterno()
+                                });
 
 	}
 

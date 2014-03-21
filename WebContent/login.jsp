@@ -25,7 +25,7 @@
         <h3 class="text-muted">BOLSA DE TRABAJO UM</h3>
         <ul class="nav nav-justified">
           <li class="active"><a href="#">Inicio</a></li>
-          <li><a href="inventarios.jsp">Usuarios</a></li>
+          <li><a href="listaUsuarios">Usuarios</a></li>
           <li><a href="alumnos.jsp">Empresas</a></li>
           <li><a href="alumnos.jsp">Profesiones</a></li>
           <li><a href="#">Administracion</a></li>

@@ -3,17 +3,17 @@
 
 <html>
 <head>
-<title>Agregar Alumnos</title>
+<title>Agregar Usuarios</title>
 
 </head>
 <body>
     
     <div class="container">
 	<center>
-		<br /> <br /> <br /> <h1 class="jumbotron">Agregar Alumnos</h1> <br />
+		<br /> <br /> <br /> <h1 class="jumbotron">Agregar Usuarios</h1> <br />
 		<br />
 		<div>
-			<form:form method="post" action="/agregarAlumnos" modelAttribute="alumnos">
+			<form:form method="post" action="/agregarUsuario" modelAttribute="alumnos">
 				<table class="table table-condensed table-hover">
 					<tr>
 						<td>Nombre :</td>

@@ -5,57 +5,44 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>Being Java Guys | Spring DI Hello World</title>
-<style>
-body {
-	font-size: 20px;
-	color: teal;
-	font-family: Calibri;
-}
-
-td {
-	font-size: 15px;
-	color: black;
-	width: 100px;
-	height: 22px;
-	text-align: center;
-}
-.heading {
-	font-size: 18px;
-	color: white;
-	font: bold;
-	background-color: orange;
-	border: thick;
-}
-</style>
+<title>Lista de Usuarios</title>
+ <%@include file="menu.jsp" %>
+    
 </head>
 <body>
+    <div class="container">
 	<center>
-		<br /> <br /> <br /> <b>Usuarios
-			List | Being Java¿? </b><br /> <br />
+		<br /> <br /> <br /> <b>Lista de Usuarios</b><br /> <br />
 			
 		
 
-		<table border="1">
+		<table class="table table-condensed table-hover">
 			<tr>
 				<td class="heading">folio</td>
 				<td class="heading">Usuario</td>
 				<td class="heading">Nombre</td>
-				
+				<td class="heading">aPaterno</td>
+                                <td class="heading">aMaterno</td>
+                                <td class="heading"></td>
+                                <td class="heading"></td>
+                                
 			</tr>
 			<c:forEach var="usuarios" items="${usuariosList}">
 				<tr>
 					<td>${usuarios.folio}</td>
 					<td>${usuarios.usuario}</td>
 					<td>${usuarios.nombre}</td>
+                                        <td>${usuarios.aPaterno}</td>
+                                        <td>${usuarios.aMaterno}</td>
 					
-					<td><a href="editarUsuario?folio=${usuarios.folio}">Edit</a></td>
-					<td><a href="delete?folio=${usuarios.folio}">Delete</a></td>
+                                        <td ><div align="right"><a href="editarUsuario?folio=${usuarios.folio}">Edit</a></div></td>
+                                        <td ><div align="right"><a href="delete?folio=${usuarios.folio}">Delete</a></div></td>
 				</tr>
 			</c:forEach>
-			<tr><td colspan="7"><a href="register">Add New Usuario</a></td></tr>
+			<tr><td colspan="7"><a href="formaInsertarUsuarios">Agrega Usuario</a></td></tr>
 		</table>
 
 	</center>
+    </div>
 </body>
 </html>
