@@ -3,48 +3,42 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-<title>Being Java Guys | Spring DI Hello World</title>
-<style>
-body {
-	font-size: 20px;
-	color: teal;
-	font-family: Calibri;
-}
+<title>Editar Usuarios</title>
 
-td {
-	font-size: 15px;
-	color: black;
-	width: 100px;
-	height: 22px;
-	text-align: center;
-}
-
-.heading {
-	font-size: 18px;
-	color: white;
-	font: bold;
-	background-color: orange;
-	border: thick;
-}
-</style>
 </head>
 <body>
+    <%@include file="menu.jsp" %>
+    <div class="container">
 	<center>
-		<br /> <br /> <br /> <b>Edit User Details </b><br /> <br />
+		<br /> <br /> <br /> <b>Editar Usuarios</b><br /> <br />
 		<div>
 			<form:form method="post" action="/actualizarUsuario" modelAttribute="usuarios">
-				<table>					
-					<tr>
-						<td>Usuario :</td>
-						<td><form:input path="usuario" value="${map.usuarios.usuario}" />
-						</td>
-					</tr>
+                            <table class="table table-condensed table-striped">					
 					
-                                        	<tr>
+                                        <tr>
 						<td>Nombre :</td>
 						<td><form:input path="nombre" value="${map.usuarios.nombre}" />
 						</td>
 					</tr>
+                                        
+                                       <tr>
+						<td>aPaterno :</td>
+						<td><form:input path="nombre" value="${map.usuarios.aPaterno}" />
+						</td>
+					</tr>
+                                        
+                                         <tr>
+						<td>aMaterno :</td>
+						<td><form:input path="nombre" value="${map.usuarios.aMaterno}" />
+						</td>
+					</tr>
+                                        
+                                         <tr>
+						<td>email :</td>
+						<td><form:input path="nombre" value="${map.usuarios.email}" />
+						</td>
+					</tr>
+                                        
                                         
 					<tr>
 						<td>&nbsp;</td>
@@ -57,5 +51,6 @@ td {
 			</form:form>
 		</div>
 	</center>
+    </div>
 </body>
 </html>

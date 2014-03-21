@@ -23,6 +23,7 @@
 				<td class="heading">Nombre</td>
 				<td class="heading">aPaterno</td>
                                 <td class="heading">aMaterno</td>
+                                <td class="heading">email</td>
                                 <td class="heading"></td>
                                 <td class="heading"></td>
                                 
@@ -34,6 +35,7 @@
 					<td>${usuarios.nombre}</td>
                                         <td>${usuarios.aPaterno}</td>
                                         <td>${usuarios.aMaterno}</td>
+                                        <td>${usuarios.email}</td>
 					
                                         <td ><div align="right"><a href="editarUsuario?folio=${usuarios.folio}">Edit</a></div></td>
                                         <td ><div align="right"><a href="delete?folio=${usuarios.folio}">Delete</a></div></td>

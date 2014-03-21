@@ -17,7 +17,7 @@ public class UsuariosDaoImpl implements UsuariosDao {
 	public void insertData(Usuarios usuarios) {
 
 		String sql = "INSERT INTO usuarios "
-				+ "(usuario,nombre, aPaterno, aMaterno) VALUES (?, ?, ?, ?)";
+				+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
@@ -51,17 +51,25 @@ public class UsuariosDaoImpl implements UsuariosDao {
 
 	@Override
 	public void updateData(Usuarios usuarios) {
-                Integer folio=usuarios.getFolio();
+                //Integer folio=usuarios.getFolio();
                 //List<Usuarios> usuariosList = new ArrayList<Usuarios>();
                 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		String sql = "UPDATE usuarios set usuario = ?,nombre = ? where folio= " + folio;
+		String sql = "UPDATE "
+                        + "usuarios set "
+                        + "nombre = ?,"
+                        + "aPaterno = ?,"
+                        + "aMaterno = ? ,"
+                        + "email = ?"
+                        + "  where folio = ? ";
     	
-                
+                System.out.println("ovidio"+usuarios.getNombre());
 		jdbcTemplate.update(
 				sql,
-				new Object[] { usuarios.getUsuario(), usuarios.getNombre()
-                                     
+				new Object[] { 
+                                    usuarios.getNombre(),usuarios.getaPaterno(),
+                                    usuarios.getaMaterno(),
+                                    usuarios.getEmail(),usuarios.getFolio()
 						});
 
 	}

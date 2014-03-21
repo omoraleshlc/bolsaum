@@ -17,7 +17,9 @@ public class UsuariosExtractor implements ResultSetExtractor<Usuarios> {
 		usuarios.setFolio(resultSet.getInt("folio"));
 		usuarios.setUsuario(resultSet.getString("usuario"));
 		usuarios.setNombre(resultSet.getString("nombre"));
-		
+                usuarios.setaPaterno(resultSet.getString("aPaterno"));
+                usuarios.setaMaterno(resultSet.getString("aMaterno"));
+		usuarios.setEmail(resultSet.getString("email"));
 		
 		return usuarios;
 	}

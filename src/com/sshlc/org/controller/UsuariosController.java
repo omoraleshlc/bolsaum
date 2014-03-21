@@ -101,7 +101,7 @@ public class UsuariosController {
 	@RequestMapping("/actualizarUsuario")
 	public String updateUsuarios(@ModelAttribute Usuarios usuarios) {
 		usuariosService.updateData(usuarios);
-		return "redirect:/getList";
+		return "redirect:/listaUsuarios";
 
 	}
 
