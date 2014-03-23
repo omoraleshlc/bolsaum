@@ -109,6 +109,6 @@ public class UsuariosController {
 	public String deleteUsuarios(@RequestParam int folio) {
 		System.out.println("folio = " + folio);
 		usuariosService.deleteData(folio);
-		return "redirect:/getList";
+		return "redirect:/listaUsuarios";
 	}
 }

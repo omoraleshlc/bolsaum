@@ -4,8 +4,10 @@
 <!-- Documentation extras -->
 <link href="images/css/docs.min.css" rel="stylesheet">
 <link href="images/js/bootstrap.js" rel="stylesheet">
-<div class="container">
 
+
+    
+    
     
   
     
@@ -13,6 +15,8 @@
     <!-- Docs master nav -->
     <header class="navbar navbar-static-top bs-docs-nav" role="banner">
   <div class="container">
+      
+      
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="sr-only">Opciones</span>
@@ -42,6 +46,6 @@
 
 
 
-</div>
+
 
 

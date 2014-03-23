@@ -17,7 +17,7 @@
 		
 
 		<table class="table table-condensed table-hover">
-			<tr>
+                    <thead>
 				<td class="heading">folio</td>
 				<td class="heading">Usuario</td>
 				<td class="heading">Nombre</td>
@@ -27,7 +27,7 @@
                                 <td class="heading"></td>
                                 <td class="heading"></td>
                                 
-			</tr>
+			</thead>
 			<c:forEach var="usuarios" items="${usuariosList}">
 				<tr>
 					<td>${usuarios.folio}</td>

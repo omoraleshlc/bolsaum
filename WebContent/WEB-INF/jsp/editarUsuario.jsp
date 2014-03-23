@@ -23,19 +23,19 @@
                                         
                                        <tr>
 						<td>aPaterno :</td>
-						<td><form:input path="nombre" value="${map.usuarios.aPaterno}" />
+						<td><form:input path="aPaterno" value="${map.usuarios.aPaterno}" />
 						</td>
 					</tr>
                                         
                                          <tr>
 						<td>aMaterno :</td>
-						<td><form:input path="nombre" value="${map.usuarios.aMaterno}" />
+						<td><form:input path="aMaterno" value="${map.usuarios.aMaterno}" />
 						</td>
 					</tr>
                                         
                                          <tr>
 						<td>email :</td>
-						<td><form:input path="nombre" value="${map.usuarios.email}" />
+						<td><form:input path="email" value="${map.usuarios.email}" />
 						</td>
 					</tr>
                                         

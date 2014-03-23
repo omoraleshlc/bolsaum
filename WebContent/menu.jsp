@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="login.jsp" class="navbar-brand">Inicio <span class="glyphicon glyphicon-home"></span></a>
+      <a href="login.jsp" class="navbar-brand">Iniciom <span class="glyphicon glyphicon-home"></span></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
