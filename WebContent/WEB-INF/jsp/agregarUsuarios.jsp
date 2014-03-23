@@ -34,7 +34,10 @@
 						<td><form:input path="aMaterno" /></td>
 					</tr>
                                         
-                                        
+                                        <tr>
+						<td>email :</td>
+						<td><form:input path="email" /></td>
+					</tr>
                                         
 					<tr>
 						<td>&nbsp;</td>
