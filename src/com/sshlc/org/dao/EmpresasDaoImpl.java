@@ -5,34 +5,34 @@ import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import com.sshlc.org.domain.Usuarios;
-import com.sshlc.org.jdbc.UsuariosRowMapper;
+import com.sshlc.org.domain.Empresas;
+import com.sshlc.org.jdbc.EmpresasRowMapper;
 
-public class UsuariosDaoImpl implements UsuariosDao {
+public class EmpresasDaoImpl implements EmpresasDao {
 
 	@Autowired
 	DataSource dataSource;
 
         
         @Override
-	public void insertData( Usuarios usuarios) {
+	public void insertData( Empresas empresas) {
 
-           List<Usuarios> usuariosList = new ArrayList<Usuarios>();
+           List<Empresas> empresasList = new ArrayList<Empresas>();
            
-		String sqlC = "select * from usuarios where usuario= '"+usuarios.getUsuario()+"'";
+		String sqlC = "select * from empresas where keyEmp= '"+empresas.getKeyEmp()+"'";
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		usuariosList = jdbcTemplate.query(sqlC, new UsuariosRowMapper());
-                //System.out.println("usuario"+sqlC+usuariosList.get(1)+usuarios.getUsuario());
-                //System.out.println("s"+usuariosList.get(0));
+		empresasList = jdbcTemplate.query(sqlC, new EmpresasRowMapper());
+                //System.out.println("usuario"+sqlC+empresasList.get(1)+empresas.getUsuario());
+                //System.out.println("s"+empresasList.get(0));
                 
-                //String u1 = (String) usuarios.getUsuario();
-                //String u2 = () usuariosList.get(0);
+                //String u1 = (String) empresas.getUsuario();
+                //String u2 = () empresasList.get(0);
                 //System.out.println(u1);
-                //System.out.println(usuarios.getUsuario());
+                //System.out.println(empresas.getUsuario());
                 String u1="a";
                 String u2="a";
                         
-                //System.out.println(usuariosList.get(0));
+                //System.out.println(empresasList.get(0));
                 
                 /*
                 private JdbcTemplate jdbcTemplate;
@@ -61,15 +61,15 @@ public class UsuariosDaoImpl implements UsuariosDao {
                      
                 } else {
                     
-                    String sql = "INSERT INTO usuarios "
+                    String sql = "INSERT INTO empresas "
 				+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
 		jdbcTemplate.update(
 				sql,
-				new Object[] { usuarios.getUsuario(), usuarios.getNombre(),
-						usuarios.getaPaterno(),
-                                usuarios.getaMaterno(),usuarios.getEmail()
+				new Object[] { empresas.getDescripcion(), empresas.getDescripcionSector(),
+						empresas.getSector(),
+                                empresas.getStatus(),empresas.getReservado()
                                 });
                 }
                 
@@ -80,56 +80,58 @@ public class UsuariosDaoImpl implements UsuariosDao {
         
 
         @Override
-	public List<Usuarios> getUsuariosList() {
-		List usuariosList = new ArrayList();
+	public List<Empresas> getEmpresasList() {
+		List empresasList = new ArrayList();
 
-		String sql = "select * from usuarios";
+		String sql = "select * from empresas";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		usuariosList = jdbcTemplate.query(sql, new UsuariosRowMapper());
-		return usuariosList;
+		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
+		return empresasList;
 	}
 
 	@Override
 	public void deleteData(Integer folio) {
-		String sql = "delete from usuarios where folio=" + folio;
+		String sql = "delete from empresas where folio=" + folio;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		jdbcTemplate.update(sql);
 
 	}
 
 	@Override
-	public void updateData(Usuarios usuarios) {
-                //Integer folio=usuarios.getFolio();
-                //List<Usuarios> usuariosList = new ArrayList<Usuarios>();
+	public void updateData(Empresas empresas) {
+                //Integer folio=empresas.getFolio();
+                //List<Empresas> empresasList = new ArrayList<Empresas>();
                 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		String sql = "UPDATE "
-                        + "usuarios set "
+                        + "empresas set "
                         + "nombre = ?,"
                         + "aPaterno = ?,"
                         + "aMaterno = ? ,"
                         + "email = ?"
                         + "  where folio = ? ";
     	
-                //System.out.println("step"+usuarios.getNombre());
+                //System.out.println("step"+empresas.getNombre());
 		jdbcTemplate.update(
 				sql,
 				new Object[] { 
-                                    usuarios.getNombre(),usuarios.getaPaterno(),
-                                    usuarios.getaMaterno(),
-                                    usuarios.getEmail(),usuarios.getFolio()
+                                    empresas.getDescripcion(),empresas.getDescripcionSector(),
+                                    empresas.getReservado(),
+                                    empresas.getSector(),empresas.getStatus()
 						});
 
 	}
 
+        
+        
 	@Override
-	public Usuarios getUsuarios(Integer folio) {
-		List<Usuarios> usuariosList = new ArrayList<Usuarios>();
-		String sql = "select * from usuarios where folio= " + folio;
+	public Empresas getEmpresas(Integer folio) {
+		List<Empresas> empresasList = new ArrayList<Empresas>();
+		String sql = "select * from empresas where folio= " + folio;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		usuariosList = jdbcTemplate.query(sql, new UsuariosRowMapper());
-		return usuariosList.get(0);
+		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
+		return empresasList.get(0);
 	}
 
 }

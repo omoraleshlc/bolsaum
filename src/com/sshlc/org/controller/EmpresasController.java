@@ -10,22 +10,22 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.sshlc.org.domain.Alumnos;
-import com.sshlc.org.services.AlumnosService;
+import com.sshlc.org.domain.Empresas;
+import com.sshlc.org.services.EmpresasService;
 
 @Controller
-public class AlumnosController {
+public class EmpresasController {
 
 	@Autowired
-	AlumnosService alumnosService;
+	EmpresasService empresasService;
         
         
         
         
         
 
-	@RequestMapping("/registrarAlumnos")
-	public ModelAndView registerAlumnos(@ModelAttribute Alumnos alumnos) {
+	@RequestMapping("/formaInsertarEmpresas")
+	public ModelAndView registerEmpresas(@ModelAttribute Empresas empresas) {
 
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
@@ -48,27 +48,27 @@ public class AlumnosController {
 		map.put("genderList", genderList);
 		map.put("cityList", cityList);
                 map.put("estadoList", estadoList);
-		return new ModelAndView("agregarAlumnos", "map", map);
+		return new ModelAndView("agregarEmpresas", "map", map);
 	}
 
-	@RequestMapping("/agregarAlumnos")
-	public String inserData(@ModelAttribute Alumnos alumnos) {
-		if (alumnos != null)
-			alumnosService.insertData(alumnos);
-		return "redirect:/listarAlumnos";
+	@RequestMapping("/insertarEmpresas")
+	public String inserData(@ModelAttribute Empresas empresas) {
+		if (empresas != null)
+			empresasService.insertData(empresas);
+		return "redirect:/listaEmpresas";
 	}
 
-	@RequestMapping("/listarAlumnos")
-	public ModelAndView getAlumnosList() {
-		List<Alumnos> alumnosList = alumnosService.getAlumnosList();
-		return new ModelAndView("alumnosLista", "alumnosLista", alumnosList);
+	@RequestMapping("/listaEmpresas")
+	public ModelAndView getEmpresasList() {
+		List<Empresas> empresasList = empresasService.getEmpresasList();
+		return new ModelAndView("empresasList", "empresasList", empresasList);
 	}
 
-	@RequestMapping("/editarAlumnos")
-	public ModelAndView editAlumnos(@RequestParam int keyAEMain,
-			@ModelAttribute Alumnos alumnos) {
+	@RequestMapping("/editarEmpresas")
+	public ModelAndView editEmpresas(@RequestParam int folio,
+			@ModelAttribute Empresas empresas) {
 
-		alumnos = alumnosService.getAlumnos(keyAEMain);
+		//empresas = empresasService.getEmpresas(folio);
 
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
@@ -87,37 +87,28 @@ public class AlumnosController {
 		estadoList.add("Veracruz");
 		estadoList.add("Chiapas");
                 
-
+                
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("genderList", genderList);
 		map.put("cityList", cityList);
-		map.put("alumnos", alumnos);
+		//map.put("usuarios", usuarios);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("editarAlumnos", "map", map);
-
-	}
-        
-        
-        
-        
-
-	@RequestMapping("/actualizarAlumnos")
-	public String updateAlumnos(@ModelAttribute Alumnos alumnos) {
-		alumnosService.updateData(alumnos);
-                //String keyAEMain=null;
-		//return "redirect:/editarAlumnos";
-                //System.out.println("keyAEMain = " + alumnos.getNombre());//Imprimir en consola
-                //out.println("<script>window.alert('SE ACTUALIZO');</script>");
-                return "redirect:/listarAlumnos";
+		return new ModelAndView("editarEmpresas", "map", map);
 
 	}
 
-	@RequestMapping("/eliminarAlumnos")
-	public String deleteAlumnos(@RequestParam int keyAEMain) {
-		System.out.println("keyAEMain = " + keyAEMain);//Imprimir en consola
-                //out.println("<script>window.alert('SE ELIMINO');</script>");
-		alumnosService.deleteData(keyAEMain);
-		return "redirect:/listarAlumnos";
+	@RequestMapping("/actualizarEmpresas")
+	public String updateEmpresas(@ModelAttribute Empresas empresas) {
+		empresasService.updateData(empresas);
+		return "redirect:/listaEmpresas";
+
+	}
+
+	@RequestMapping("/delete")
+	public String deleteEmpresas(@RequestParam int folio) {
+		System.out.println("folio = " + folio);
+		empresasService.deleteData(folio);
+		return "redirect:/listaEmpresas";
 	}
 }
