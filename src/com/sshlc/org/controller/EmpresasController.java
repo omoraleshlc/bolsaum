@@ -27,34 +27,41 @@ public class EmpresasController {
 	@RequestMapping("/formaInsertarEmpresas")
 	public ModelAndView registerEmpresas(@ModelAttribute Empresas empresas) {
 
-		List<String> genderList = new ArrayList<String>();
-		genderList.add("male");
-		genderList.add("female");
-                
-                List<String> estadoList = new ArrayList<String>();
-		estadoList.add("Nuevo Leon");
-		estadoList.add("Tamaulipas");
-		estadoList.add("Veracruz");
-		estadoList.add("Chiapas");
-                
 
-		List<String> cityList = new ArrayList<String>();
-		cityList.add("delhi");
-		cityList.add("gurgaon");
-		cityList.add("meerut");
-		cityList.add("noida");
-
+                List<String> sectorList = new ArrayList<String>();
+		sectorList.add("Administrativos");
+                sectorList.add("Biología");
+                sectorList.add("Comunicaciones");
+                sectorList.add("Construcción");
+                sectorList.add("Contabilidad");
+                sectorList.add("Creatividad, Producción y Diseño Comercial");
+                sectorList.add("Derecho y Leyes");
+                sectorList.add("Educación");
+                sectorList.add("Logística, Transportación y Distribución");
+                sectorList.add("Manufactura, Producción y Operación");
+                sectorList.add("Mercadotecnia, Publicidad y Relaciones Públicas");
+                sectorList.add("Recursos Humanos");
+                sectorList.add("Salud y Belleza");
+                sectorList.add("Sector Salud");
+                sectorList.add("Seguro y Reaseguro");
+                sectorList.add("Tecnologías de la Información / Sistemas");
+                sectorList.add("Turismo, Hospitalidad y Gastronomía");
+                sectorList.add("Ventas");
+                sectorList.add("Veterinaria / Zoología");
+                
 		Map<String, List> map = new HashMap<String, List>();
-		map.put("genderList", genderList);
-		map.put("cityList", cityList);
-                map.put("estadoList", estadoList);
+		map.put("sectorList", sectorList);
+                
 		return new ModelAndView("agregarEmpresas", "map", map);
 	}
+        
+        
+        
 
 	@RequestMapping("/insertarEmpresas")
 	public String inserData(@ModelAttribute Empresas empresas) {
 		if (empresas != null)
-			empresasService.insertData(empresas);
+			empresasService.insertarEmpresas(empresas);
 		return "redirect:/listaEmpresas";
 	}
 
@@ -65,11 +72,11 @@ public class EmpresasController {
 	}
 
 	@RequestMapping("/editarEmpresas")
-	public ModelAndView editEmpresas(@RequestParam int folio,
+	public ModelAndView editEmpresas(@RequestParam int keyEmp,
 			@ModelAttribute Empresas empresas) {
 
 		//empresas = empresasService.getEmpresas(folio);
-
+                String descripcion = empresas.getDescripcion();
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
 		genderList.add("female");
@@ -105,8 +112,8 @@ public class EmpresasController {
 
 	}
 
-	@RequestMapping("/delete")
-	public String deleteEmpresas(@RequestParam int folio) {
+	@RequestMapping("/eliminaEmpresas")
+	public String eliminaEmpresas(@RequestParam int folio) {
 		System.out.println("folio = " + folio);
 		empresasService.deleteData(folio);
 		return "redirect:/listaEmpresas";

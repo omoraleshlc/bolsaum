@@ -29,10 +29,10 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="getListaArticulos">Articulos <span class="glyphicon glyphicon-align-center"></span></a>
+          <a href="listaEmpresas">Empresas <span class="glyphicon glyphicon-align-center"></span></a>
         </li>
         <li>
-          <a href="listarAlumnos">Alumnos <span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span></a>
+          <a href="listaUsuarios">Usuarios <span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span><span class="glyphicon glyphicon-user"></span></a>
         </li>
         
       </ul>

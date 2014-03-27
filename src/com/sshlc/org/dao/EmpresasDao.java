@@ -4,7 +4,7 @@ import java.util.List;
 import com.sshlc.org.domain.Empresas;
 
 public interface EmpresasDao {
-	public void insertData(Empresas empresas);
+	public void insertarEmpresas(Empresas empresas);
 
 	public List<Empresas> getEmpresasList();
 

@@ -13,8 +13,8 @@ public class EmpresasServiceImpl implements EmpresasService {
 	EmpresasDao empresasdao;
 
 	@Override
-	public void insertData(Empresas empresas) {
-		empresasdao.insertData(empresas);
+	public void insertarEmpresas(Empresas empresas) {
+		empresasdao.insertarEmpresas(empresas);
 	}
 
 	@Override

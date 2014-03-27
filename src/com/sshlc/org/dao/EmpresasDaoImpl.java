@@ -15,7 +15,7 @@ public class EmpresasDaoImpl implements EmpresasDao {
 
         
         @Override
-	public void insertData( Empresas empresas) {
+	public void insertarEmpresas( Empresas empresas) {
 
            List<Empresas> empresasList = new ArrayList<Empresas>();
            
@@ -72,6 +72,16 @@ public class EmpresasDaoImpl implements EmpresasDao {
                                 empresas.getStatus(),empresas.getReservado()
                                 });
                 }
+                
+                String sql = "INSERT INTO empresas "
+				+ "(descripcion,sector, status) VALUES (?, ?, ?)";
+		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+
+		jdbcTemplate.update(
+				sql,
+				new Object[] { empresas.getDescripcion(), empresas.getSector(),
+						"activo"
+                                });
                 
         }
                 

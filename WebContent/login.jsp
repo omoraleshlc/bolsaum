@@ -1,7 +1,7 @@
 <%--
     Document   : login
     Created on : 2013/06/16, 8:04:40
-    Author     : doumbiaz
+    Author     : omorales
 --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,7 +26,7 @@
         <ul class="nav nav-justified">
           <li class="active"><a href="#">Inicio</a></li>
           <li><a href="listaUsuarios">Usuarios</a></li>
-          <li><a href="alumnos.jsp">Empresas</a></li>
+          <li><a href="listaEmpresas">Empresas</a></li>
           <li><a href="alumnos.jsp">Profesiones</a></li>
           <li><a href="#">Administracion</a></li>
           <li><a href="#">Operaciones</a></li>
