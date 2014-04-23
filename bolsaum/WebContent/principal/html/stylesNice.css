@@ -1,0 +1,75 @@
+body {
+	background-color: #E2E3E5;
+}
+#contenedor {
+	background-color: #e9e6c3;
+	height: 700px;
+	width: 1000px;
+	color: #000;
+	margin: auto;
+}
+#empresas{
+	height: 600px;
+	width: 200px;
+	background-color: #0099FF;
+	float: left;
+}
+#egresados{
+	background-color: #FF3;
+	float: left;
+	height: 600px;
+	width: 200px;
+	margin-left: 10px;
+}
+#logo{
+	float: right;
+	padding-right: 60px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+}
+#tituloUM{
+	height: 100px;
+	width: 450px;
+	float: left;
+	margin-left: 80px;
+}
+#menudeOfertas{
+	background-color: #0C6;
+	float: left;
+	height: 80px;
+	width: 250px;
+	margin-left: 60px;
+	margin-top: 80px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+}
+#administrador{
+	background-color: #C36;
+	float: left;
+	height: 110px;
+	width: 250px;
+	margin-top: 40px;
+	margin-left: 60px;
+}
+.letra1 {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+.titulo{
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 36px;
+	color: #000;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#footWrap{width:100%; margin:0px; padding:0 0 23px 0; float:left; background:url(images/footbg.jpg) repeat-x}
+#footPanel{width:928px; margin:0 auto; padding:0px}
+#footNav{width:928px; margin:25px 0 0 0; padding:0px; float:left}
+#footNav ul{width:655px; margin:0 auto; padding:0px; display:block}
+#footNav ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#footNav ul li .blank{width:auto; margin:3px 0 0 0; padding:0 7px 0 7px; float:left; font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px}
+#footNav ul li a{font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px; text-decoration:none; margin:0px; padding:0px}
+#copyright{width:928px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:10px; color:#9fb31a; line-height:14px; text-align:center}

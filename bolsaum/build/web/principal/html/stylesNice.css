@@ -1,0 +1,63 @@
+body {
+	background-color: #414141;
+}
+#contenedor {
+	background-color: #FC0;
+	height: 700px;
+	width: 1000px;
+	color: #000;
+	margin: auto;
+}
+#empresas{
+	height: 600px;
+	width: 200px;
+	background-color: #603;
+	float: left;
+}
+#egresados{
+	background-color: #006;
+	float: left;
+	height: 600px;
+	width: 200px;
+	margin-left: 10px;
+}
+#logo{
+	float: right;
+	padding-top: 30px;
+	padding-right: 60px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+}
+#menudeOfertas{
+	background-color: #090;
+	float: left;
+	height: 100px;
+	width: 250px;
+	margin-left: 60px;
+	margin-top: 70px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+}
+#administrador{
+	background-color: #C00;
+	float: left;
+	height: 110px;
+	width: 250px;
+	margin-top: 40px;
+	margin-left: 60px;
+}
+.letra1 {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#footWrap{width:100%; margin:0px; padding:0 0 23px 0; float:left; background:url(images/footbg.jpg) repeat-x}
+#footPanel{width:928px; margin:0 auto; padding:0px}
+#footNav{width:928px; margin:25px 0 0 0; padding:0px; float:left}
+#footNav ul{width:655px; margin:0 auto; padding:0px; display:block}
+#footNav ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#footNav ul li .blank{width:auto; margin:3px 0 0 0; padding:0 7px 0 7px; float:left; font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px}
+#footNav ul li a{font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px; text-decoration:none; margin:0px; padding:0px}
+#copyright{width:928px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:10px; color:#9fb31a; line-height:14px; text-align:center}

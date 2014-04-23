@@ -1,0 +1,87 @@
+body{margin:0px; padding:0px; background:#414141}
+#topContentWrap{width:100%; margin:0px; padding:0px; float:left; background:#f9f7db url(images/bodyBg.jpg) repeat-x}
+#topContent{width:928px; margin:0 auto; padding:0px}
+#logoPanel{width:75px; height:740px; margin:0px; padding:0px; float:left; text-indent:-9999px; background:url(images/globalpic.jpg) no-repeat}
+#logoPanel h1{width:75px; height:740px; margin:0px; padding:0px; float:left; text-indent:-9999px;}
+#aboutPanel{width:216px; height:715px; margin:0px; padding:0px; float:left; background:#cd4007 url(images/globalpic.jpg) no-repeat -77px -494px}
+#home{width:47px; height:110px; margin:0px; padding:0 0 0 169px; float:left}
+#home a{width:47px; height:36px; margin:0px; padding:56px 0 0 0; float:left; font-family:Arial; font-size:12px; font-weight:bold; color:#646464; line-height:13px; text-align:center; text-decoration:none; background:url(images/homeBg.gif) no-repeat}
+#home a:hover{height:36px; padding:74px 0 0 0; background:url(images/homeBg.gif) no-repeat -48px 0}
+
+
+#columnaIzquierda{
+	width: 20%;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	background-color: #e9e6c3;
+	background-repeat: repeat-x;
+}
+#middlePanel{width:928px; margin:0 auto; padding:0px}
+#middlePanel .left{width:473px; margin:0px; padding:0 31px 34px 26px; float:left}
+#middlePanel .left h2{width:423px; height:38px; margin:24px 0 0 0; padding:0 0 0 50px; float:left; font-family:Arial; font-size:34px; color:#1d1d1d; line-height:38px; font-weight:normal; background:url(images/globalpic.jpg) no-repeat -474px -357px}
+#middlePanel .left p{
+	width: 470px;
+	margin: 9px 0 0 0;
+	padding: 0px;
+	float: left;
+	font-family: Arial;
+	font-size: 14px;
+	color: #575433;
+	line-height: 19px;
+	font-weight: bold;
+}
+#middlePanel .left p span{font-weight:bold; color:#8da00d}
+#middlePanel .left a{width:62px; height:23px; margin:7px 0 0 0; padding:0px; float:right; font-family:Arial; font-size:11px; color:#FFFFFF; line-height:22px; text-align:center; text-decoration:none; background:url(images/globalpic.jpg) no-repeat -117px -226px}
+#loginPanel{
+	width: 200px;
+	float: left;
+	border: #d7d3aa solid 1px;
+	background: #f1eed0;
+	margin-top: 5px;
+	margin-bottom: 19px;
+	padding: 0px;
+	
+}
+#loginPanel h2{
+	width: 189px;
+	height: 34px;
+	margin: 0px;
+	float: left;
+	font-family: Arial;
+	font-size: 18px;
+	color: #212121;
+	line-height: 30px;
+	font-weight: normal;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: -483px -399px;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 33px;
+}
+#loginPanel h3{width:168px; margin:8px 0 0 0; padding:0 17px 0 17px; float:left; font-family:Arial; font-size:10px; color:#1d1d1d; line-height:14px; font-weight:normal}
+#loginPanel input{width:167px; height:18px; margin:3px 0 0 0; padding:3px 0 0 0; float:left;  font-family:Arial; font-size:10px; color:#212121; line-height:14px}
+#loginPanel .blank{width:17px; height:10px; margin:0px; padding:0px; float:left}
+#loginPanel p{width:127px; margin:9px 0 0 0; padding:0 0 0 17px; float:left}
+#loginPanel p a{font-family:Arial; font-size:12px; color:#9fb31a; font-weight:bold; line-height:16px; text-decoration:none;}
+#loginPanel .login{width:41px; height:23px; margin:6px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#FFFFFF; line-height:20px; text-align:center; text-decoration:none; background:url(images/globalpic.jpg) no-repeat -180px -226px}
+#contact{width:175px; height:107px; margin:21px 0 0 0; padding:0px; float:left; background:url(images/globalpic.jpg) no-repeat -75px -111px}
+#contact p{font-family:"Arial Narrow"; font-size:26px; color:#252525; line-height:30px; margin:10px 0 0 0; padding:0 0 0 28px}
+#gap{width:19px; height:10px; margin:0px; padding:0px; float:left}
+#footWrap{width:100%; margin:0px; padding:0 0 23px 0; float:left; background:url(images/footbg.jpg) repeat-x}
+#footPanel{width:928px; margin:0 auto; padding:0px}
+#footNav{width:928px; margin:25px 0 0 0; padding:0px; float:left}
+#footNav ul{width:655px; margin:0 auto; padding:0px; display:block}
+#footNav ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#footNav ul li .blank{width:auto; margin:3px 0 0 0; padding:0 7px 0 7px; float:left; font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px}
+#footNav ul li a{font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px; text-decoration:none; margin:0px; padding:0px}
+#copyright{width:928px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:10px; color:#9fb31a; line-height:14px; text-align:center}
+#validation{width:928px; margin:11px 0 0 0; padding:0px; float:left}
+#validation ul{width:132px; margin:0 auto; padding:0px; display:block}
+#validation ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#validation ul li .blank{width:7px; height:10px; margin:0px; padding:0px; float:left}
+#validation ul li a{width:62px; height:23px; font-family:Arial; font-size:11px; color:#FFFFFF; line-height:20px; text-align:center; text-decoration:none; margin:0px; padding:0px; float:left; display:block; background:url(images/globalpic.jpg) no-repeat -222px -226px}
+#footPanel p{width:928px; margin:7px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:12px; color:#e9e6c3; line-height:16px; font-weight:bold; text-align:center}
+#footPanel p a{color:#FFF; background:#252525; text-decoration:none}

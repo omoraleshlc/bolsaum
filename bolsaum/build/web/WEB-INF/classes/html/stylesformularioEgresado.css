@@ -1,0 +1,48 @@
+@charset "utf-8";
+body{
+	margin:0px; padding:0px; background:#414141; }
+.contenedor {
+	margin-top:25px;
+	
+}
+
+.columnaIzq {
+	margin-left:150px;
+	background-color: #e9e6c3;
+	height: 500px;
+	width: 230px;
+	float:left;
+}
+
+.paraFormulario {
+	background-color: #FFCC33;
+	height: 500px;
+	width: 650px;
+	margin-left: 400px;
+}
+
+#footWrap{width:100%; margin:0px; padding:0 0 23px 0; float:left; background:url(images/footbg.jpg) repeat-x}
+#footPanel{width:928px; margin:0 auto; padding:0px}
+#footNav{width:928px; margin:25px 0 0 0; padding:0px; float:left}
+#footNav ul{width:655px; margin:0 auto; padding:0px; display:block}
+#footNav ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#footNav ul li .blank{width:auto; margin:3px 0 0 0; padding:0 7px 0 7px; float:left; font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px}
+#footNav ul li a{font-family:Arial; font-size:11px; color:#d5d5d5; line-height:15px; text-decoration:none; margin:0px; padding:0px}
+#copyright{width:928px; margin:3px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:10px; color:#9fb31a; line-height:14px; text-align:center}
+#validation{width:928px; margin:11px 0 0 0; padding:0px; float:left}
+#validation ul{width:132px; margin:0 auto; padding:0px; display:block}
+#validation ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
+#validation ul li .blank{width:7px; height:10px; margin:0px; padding:0px; float:left}
+#validation ul li a{width:62px; height:23px; font-family:Arial; font-size:11px; color:#FFFFFF; line-height:20px; text-align:center; text-decoration:none; margin:0px; padding:0px; float:left; display:block; background:url(images/globalpic.jpg) no-repeat -222px -226px}
+
+
+.letras1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.letra2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #9C0;
+	font-style: italic;
+}
