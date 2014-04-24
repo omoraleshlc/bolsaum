@@ -10,16 +10,13 @@
                 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"                    
 >
     
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <mvc:resources mapping="/principal/**" location="/principal/" />
-=======
-    
->>>>>>> origin/master
     <mvc:resources mapping="/css/**" location="/css/" />
     <mvc:resources mapping="/images/**" location="/images/" />
     <mvc:resources mapping="/img/**" location="/img/" />
     <mvc:resources mapping="/js/**" location="/js/" />
+    
     <mvc:annotation-driven />
 
 	<!-- telling container to take care of annotations stuff -->
@@ -37,57 +34,19 @@
 
 	<!-- declare beans -->
 	<bean id="usuariosDao" class="com.sshlc.org.dao.UsuariosDaoImpl" />	
-        <bean id="empresasDao" class="com.sshlc.org.dao.EmpresasDaoImpl" />	
+        <bean id="empresasDao" class="com.sshlc.org.dao.EmpresasDaoImpl" />
+        <bean id="ofertasDao" class="com.sshlc.org.dao.OfertasDaoImpl" />	
        
         
         <bean id="usuariosService" class="com.sshlc.org.services.UsuariosServiceImpl" />
 	<bean id="empresasService" class="com.sshlc.org.services.EmpresasServiceImpl" />
+        <bean id="ofertasService" class="com.sshlc.org.services.OfertasServiceImpl" />
         
 	<!-- declare datasource bean -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/bolsaum" />
 		<property name="username" value="root" />
 		<property name="password" value="" />
 	</bean>
 </beans>
-=======
-    
-    <mvc:resources mapping="/css/**" location="/css/" />
-    <mvc:resources mapping="/images/**" location="/images/" />
-    <mvc:resources mapping="/img/**" location="/img/" />
-    <mvc:resources mapping="/js/**" location="/js/" />
-    <mvc:annotation-driven />
-
-	<!-- telling container to take care of annotations stuff -->
-	<context:annotation-config />
-
-	<!-- declaring base package -->
-	<context:component-scan base-package="com.sshlc.org" />
-
-	<!-- adding view resolver to show jsp's on browser -->
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-
-	<!-- declare beans -->
-	<bean id="usuariosDao" class="com.sshlc.org.dao.UsuariosDaoImpl" />	
-        <bean id="empresasDao" class="com.sshlc.org.dao.EmpresasDaoImpl" />	
-       
-        
-        <bean id="usuariosService" class="com.sshlc.org.services.UsuariosServiceImpl" />
-	<bean id="empresasService" class="com.sshlc.org.services.EmpresasServiceImpl" />
-        
-	<!-- declare datasource bean -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/bolsaum" />
-		<property name="username" value="root" />
-		<property name="password" value="" />
-	</bean>
-</beans>
->>>>>>> origin/master

@@ -65,23 +65,24 @@ public class OfertasDaoImpl implements OfertasDao {
 				+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
+                /*    
 		jdbcTemplate.update(
 				sql,
 				new Object[] { ofertas.getDescripcion(), ofertas.getDescripcionSector(),
 						ofertas.getSector(),
                                 ofertas.getStatus(),ofertas.getReservado()
-                                });
+                                });*/
                 }
                 
                 String sql = "INSERT INTO ofertas "
 				+ "(descripcion,sector, status) VALUES (?, ?, ?)";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-
+                /*
 		jdbcTemplate.update(
 				sql,
 				new Object[] { ofertas.getDescripcion(), ofertas.getSector(),
 						"activo"
-                                });
+                                });*/
                 
         }
                 
@@ -123,13 +124,14 @@ public class OfertasDaoImpl implements OfertasDao {
                         + "  where folio = ? ";
     	
                 //System.out.println("step"+ofertas.getNombre());
+                /*
 		jdbcTemplate.update(
 				sql,
 				new Object[] { 
                                     ofertas.getDescripcion(),ofertas.getDescripcionSector(),
                                     ofertas.getReservado(),
                                     ofertas.getSector(),ofertas.getStatus()
-						});
+						});*/
 
 	}
 
