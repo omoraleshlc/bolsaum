@@ -18,10 +18,10 @@ public class OfertasDaoImpl implements OfertasDao {
 	public void insertarOfertas( Ofertas ofertas) {
 
            List<Ofertas> ofertasList = new ArrayList<Ofertas>();
-           
-		String sqlC = "select * from ofertas where keyEmp= '"+ofertas.getKeyO()+"'";
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		ofertasList = jdbcTemplate.query(sqlC, new OfertasRowMapper());
+                
+		//String sqlC = "select * from ofertas where keyEmp= '"+ofertas.getKeyO()+"'";
+		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		//ofertasList = jdbcTemplate.query(sqlC, new OfertasRowMapper());
                 //System.out.println("usuario"+sqlC+ofertasList.get(1)+ofertas.getUsuario());
                 //System.out.println("s"+ofertasList.get(0));
                 
@@ -29,8 +29,8 @@ public class OfertasDaoImpl implements OfertasDao {
                 //String u2 = () ofertasList.get(0);
                 //System.out.println(u1);
                 //System.out.println(ofertas.getUsuario());
-                String u1="a";
-                String u2="a";
+                //String u1="a";
+                //String u2="a";
                         
                 //System.out.println(ofertasList.get(0));
                 
@@ -55,14 +55,14 @@ public class OfertasDaoImpl implements OfertasDao {
     
     // notice the wrapping up of the argumenta in an array
     //return (Actor) jdbcTemplate.queryForObject(sql, new Object[] {specialty, age}, mapper);
-
+                /*
                 if (u1.equalsIgnoreCase(u2)) {
                     System.out.println("ya existe eese usuario!");
                      
                 } else {
-                    
-                    String sql = "INSERT INTO ofertas "
-				+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
+                    */
+                    //String sql = "INSERT INTO ofertas "
+			//	+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
                 /*    
@@ -72,17 +72,19 @@ public class OfertasDaoImpl implements OfertasDao {
 						ofertas.getSector(),
                                 ofertas.getStatus(),ofertas.getReservado()
                                 });*/
-                }
+                //}
                 
-                String sql = "INSERT INTO ofertas "
-				+ "(descripcion,sector, status) VALUES (?, ?, ?)";
+               
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-                /*
+           
+                JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+                String sql = "INSERT INTO catofertas "
+				+ "(id_empresa) VALUES (?)";
 		jdbcTemplate.update(
 				sql,
-				new Object[] { ofertas.getDescripcion(), ofertas.getSector(),
-						"activo"
-                                });*/
+				new Object[] { ofertas.getId_empresa()
+						
+                                });
                 
         }
                 
@@ -94,7 +96,7 @@ public class OfertasDaoImpl implements OfertasDao {
 	public List<Ofertas> getOfertasList() {
 		List ofertasList = new ArrayList();
 
-		String sql = "select * from ofertas";
+		String sql = "select * from catofertas";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		ofertasList = jdbcTemplate.query(sql, new OfertasRowMapper());

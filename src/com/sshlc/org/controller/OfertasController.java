@@ -61,8 +61,9 @@ public class OfertasController {
         
 
 	@RequestMapping("/insertarOfertas")
-	public String inserData(@ModelAttribute Ofertas ofertas) {
-		if (ofertas != null)
+	public String insertarOfertas(@ModelAttribute Ofertas ofertas,
+                @RequestParam String empresa) {
+		if (!empresa.isEmpty())
 			ofertasService.insertarOfertas(ofertas);
 		return "redirect:/listaOfertas";
 	}
@@ -94,7 +95,7 @@ public class OfertasController {
         @RequestMapping("/listaOfertas")
 	public ModelAndView getOfertasList() {
 	List<Ofertas> ofertasList = ofertasService.getOfertasList();
-	return new ModelAndView("ofertasList", "ofertasList", ofertasList);
+	return new ModelAndView("listaOfertas", "listaOfertas", ofertasList);
 	}
         
         

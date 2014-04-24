@@ -4,7 +4,7 @@ public class Ofertas {
 
 	//
         private Integer keyO;
-	private String idEmpresa;
+	private String id_empresa;
 	private String descripcionEmpresa;
         private String tipo;
         private String descripcion;
@@ -17,19 +17,6 @@ public class Ofertas {
         private Integer numeroVacantes;
         private String tipoContrato;
 
-    /**
-     * @return the idEmpresa
-     */
-    public String getIdEmpresa() {
-        return idEmpresa;
-    }
-
-    /**
-     * @param idEmpresa the idEmpresa to set
-     */
-    public void setIdEmpresa(String idEmpresa) {
-        this.idEmpresa = idEmpresa;
-    }
 
     /**
      * @return the descripcionEmpresa
@@ -197,6 +184,20 @@ public class Ofertas {
      */
     public void setKeyO(Integer keyO) {
         this.keyO = keyO;
+    }
+
+    /**
+     * @return the id_empresa
+     */
+    public String getId_empresa() {
+        return id_empresa;
+    }
+
+    /**
+     * @param id_empresa the id_empresa to set
+     */
+    public void setId_empresa(String id_empresa) {
+        this.id_empresa = id_empresa;
     }
 
         

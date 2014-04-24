@@ -61,10 +61,13 @@ public class EmpresasController {
         
         
         @RequestMapping("/entradaEmpresa")
-        public String entrada(@ModelAttribute Empresas empresas) {
-            //if (empresas != null)
-            empresasService.insertarEmpresas(empresas);
-            return "redirect:/listaEmpresas";
+        public String entrada(@ModelAttribute Empresas empresas,@RequestParam String user,
+                @RequestParam String password
+        ) {
+            if(user.isEmpty() || password.isEmpty()){
+             return "redirect:/usuarioInvalido";
+        }else{
+            return "redirect:/bienvenidaEmpresas.jsp";}
         }
 
 	@RequestMapping("/insertarEmpresas")

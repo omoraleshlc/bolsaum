@@ -15,7 +15,7 @@ public class OfertasExtractor implements ResultSetExtractor<Ofertas> {
 		Ofertas ofertas = new Ofertas();
                 
                 //ofertas.setKeyO(resultSet.getInteger("keyO"));
-		ofertas.setIdEmpresa(resultSet.getString("idEmpresa"));
+		ofertas.setId_empresa(resultSet.getString("id_empresa"));
                 ofertas.setDescripcionEmpresa(resultSet.getString("descripcionEmpresa"));
                 ofertas.setTipo(resultSet.getString("Tipo"));
                 ofertas.setDescripcion(resultSet.getString("descripcion"));

@@ -25,7 +25,12 @@
     <p>&nbsp;</p>
     
     </div>
-  	<div class="paraFormulario">
+  
+            
+            
+            
+            <form action="insertarOfertas" method="post">            
+            <div class="paraFormulario">
    	  <h1> Registro de Ofertas de trabajo</h1>
       <p class="letras1"> DATOS GENERALES DE LA EMPRESA O INSTITUCION </p>
         
@@ -150,7 +155,10 @@
 
 
     <button> Registrar </button>
-
+ </form>
+    
+    
+    
     </div> 
     </div>
  <div id="footWrap">
