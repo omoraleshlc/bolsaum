@@ -11,7 +11,10 @@
   <body>
   	<div class="contenedor">
     <div class="columnaIzq">
-    <p class="letras1"><form action="index.jsp"><button> -- HOME --</button></form></p>
+    <p class="letras1">
+        
+        
+        <form action="index.jsp"><button> -- HOME --</button></form></p>
     
     
     
@@ -26,11 +29,12 @@
    	  <h1> Registro de Ofertas de trabajo</h1>
       <p class="letras1"> DATOS GENERALES DE LA EMPRESA O INSTITUCION </p>
         
-        <p> <input type="text" size="40" maxlength="50" name="empresa" placeholder="EMPRESA">
+        <p> 
+            <input type="text" size="40" maxlength="50" name="empresa" placeholder="EMPRESA"></input>
       </p>
 	    
       <p>
-          <select class="dropdown" data-val="true" data-val-range="Debes seleccionar la categor&amp;#237;a." data-val-range-max="2147483647" data-val-range-min="1" data-val-required="Debes seleccionar la categor&amp;#237;a." id="Category" name="giro">
+ <select class="dropdown" data-val="true" data-val-range="Debes seleccionar la categor&amp;#237;a." data-val-range-max="2147483647" data-val-range-min="1" data-val-required="Debes seleccionar la categor&amp;#237;a." id="Category" name="giro">
               <option value="">- Seleccionar -</option>
 <option value="1">Administrativos</option>
 <option value="2">Biolog&#237;a</option>
