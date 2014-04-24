@@ -14,7 +14,7 @@
 		<br />
 		<div>
                     <script>
-                        window.alert("USUARIO INVALIDO");
+                        window.alert("USUARIO INVALIDO!!");
                         window.location.href="empresas.jsp"
                         </script>
 		</div>

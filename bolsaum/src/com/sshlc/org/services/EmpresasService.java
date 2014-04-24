@@ -6,7 +6,8 @@ import com.sshlc.org.domain.Empresas;
 
 public interface EmpresasService {
 	public void insertarEmpresas(Empresas empresas);
-
+        
+       
 	public List<Empresas> getEmpresasList();
 
 	public void deleteData(Integer folio);

@@ -73,12 +73,14 @@ public class EmpresasController {
 	public ModelAndView getEntradaEmpresa(@ModelAttribute Usuarios usuarios,@RequestParam String user,@RequestParam String password) {
 		List<Empresas> empresasList = empresasService.getEmpresasList();
                 //VERIFICAR USUARIO SI VIENE VACIO
-                //System.out.println(password);
+                //System.out.println(empresasList.get(0));
+                //String usuario = usuarios.getUsuario();
+                //System.out.println(usuario);
                 if(user.isEmpty() || password.isEmpty()){
                 return new ModelAndView("usuarioInvalido", "usuarioInvalido", empresasList);
                 }else{
                 //VERIFICAR EL OBJETO DESDE LA DB
-                    
+                
 		return new ModelAndView("bienvenidaEmpresas", "bienvenidaEmpresas", empresasList);
                 }
 	}
@@ -90,12 +92,28 @@ public class EmpresasController {
 		return new ModelAndView("usuarioInvalido", "usuarioInvalido", user);
 	}
         
-        
-	@RequestMapping("/listaEmpresas")
+        @RequestMapping("/listaEmpresas")
 	public ModelAndView getEmpresasList() {
-		List<Empresas> empresasList = empresasService.getEmpresasList();
-		return new ModelAndView("empresasList", "empresasList", empresasList);
+	List<Empresas> empresasList = empresasService.getEmpresasList();
+	return new ModelAndView("empresasList", "empresasList", empresasList);
 	}
+        
+        
+        /*
+	@RequestMapping("/insertarOfertas")
+	public String insertarPublicacion(@RequestParam String id_empresa, @RequestParam String fechaInicio,
+                 @RequestParam String fechaFinal, @RequestParam String descripcionEmpresa,
+                  @RequestParam String tipo, @RequestParam String descripcion,
+                   @RequestParam String direccion, @RequestParam String paginaWeb,
+                    @RequestParam String nombrePuesto, @RequestParam String sueldo,
+                     @RequestParam String prestaciones, @RequestParam String horarioJornada,
+                      @RequestParam String numeroVacantes,
+                       @RequestParam String tipoContrato,
+			@ModelAttribute Empresas ofertas) {
+		if (ofertas != null)
+			empresasService.insertarOfertas(ofertas);
+		return "redirect:/listaOfertas";
+	}*/
 
 	@RequestMapping("/editarEmpresas")
 	public ModelAndView editEmpresas(@RequestParam int keyEmp,
