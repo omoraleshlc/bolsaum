@@ -16,8 +16,13 @@ public class EmpresasServiceImpl implements EmpresasService {
 	public void insertarEmpresas(Empresas empresas) {
 		empresasdao.insertarEmpresas(empresas);
 	}
+<<<<<<< HEAD
+        
+        @Override
+=======
 
 	@Override
+>>>>>>> origin/master
 	public List<Empresas> getEmpresasList() {
 		return empresasdao.getEmpresasList();
 	}
