@@ -35,7 +35,7 @@
       <p class="letras1"> DATOS GENERALES DE LA EMPRESA O INSTITUCION </p>
         
         <p> 
-            <input type="text" size="40" maxlength="50" name="empresa" placeholder="EMPRESA"></input>
+            <input type="text" size="40" maxlength="50" name="id_empresa" placeholder="EMPRESA"></input>
       </p>
 	    
       <p>

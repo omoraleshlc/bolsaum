@@ -18,7 +18,14 @@ public class OfertasDaoImpl implements OfertasDao {
 	public void insertarOfertas( Ofertas ofertas) {
 
            List<Ofertas> ofertasList = new ArrayList<Ofertas>();
-                
+                JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+                String sql = "INSERT INTO catofertas "
+				+ "(id_empresa) VALUES (?)";
+		jdbcTemplate.update(
+				sql,
+				new Object[] { ofertas.getId_empresa()
+						
+                                });
 		//String sqlC = "select * from ofertas where keyEmp= '"+ofertas.getKeyO()+"'";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		//ofertasList = jdbcTemplate.query(sqlC, new OfertasRowMapper());
@@ -77,14 +84,7 @@ public class OfertasDaoImpl implements OfertasDao {
                
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
            
-                JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-                String sql = "INSERT INTO catofertas "
-				+ "(id_empresa) VALUES (?)";
-		jdbcTemplate.update(
-				sql,
-				new Object[] { ofertas.getId_empresa()
-						
-                                });
+                
                 
         }
                 

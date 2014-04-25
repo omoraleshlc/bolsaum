@@ -61,9 +61,9 @@ public class OfertasController {
         
 
 	@RequestMapping("/insertarOfertas")
-	public String insertarOfertas(@ModelAttribute Ofertas ofertas,
-                @RequestParam String empresa) {
-		if (!empresa.isEmpty())
+	public String insertarOfertas(@RequestParam String id_empresa,@ModelAttribute Ofertas ofertas
+        ) {
+		if (!id_empresa.isEmpty())
 			ofertasService.insertarOfertas(ofertas);
 		return "redirect:/listaOfertas";
 	}
