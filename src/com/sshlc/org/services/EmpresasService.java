@@ -5,7 +5,7 @@ import java.util.List;
 import com.sshlc.org.domain.Empresas;
 
 public interface EmpresasService {
-	public void insertarEmpresas(Empresas ofertas);
+	public void insertarEmpresas(Empresas empresas);
         
        
 	public List<Empresas> getEmpresasList();
@@ -14,5 +14,5 @@ public interface EmpresasService {
 
 	public Empresas getEmpresas(Integer folio);
 
-	public void updateData(Empresas ofertas);
+	public void updateData(Empresas empresas);
 }

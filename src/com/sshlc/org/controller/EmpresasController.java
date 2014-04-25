@@ -67,11 +67,22 @@ public class EmpresasController {
             if(user.isEmpty() || password.isEmpty()){
              return "redirect:/usuarioInvalido";
         }else{
-            return "redirect:/bienvenidaEmpresas.jsp";}
+            return "redirect:/bienvenidaEmpresas.jsp";
+            }
         }
 
+        
+        
+        /*
+                @RequestParam String direccion,       @RequestParam String e-mail,
+                @RequestParam String sitioWEB */
+        
 	@RequestMapping("/insertarEmpresas")
-	public String inserData(@ModelAttribute Empresas empresas) {
+	public String insertData(@ModelAttribute Empresas empresas,
+                @RequestParam String rfc_curp,        @RequestParam String razon_social,
+                @RequestParam String nombre_comercial, 
+                @RequestParam String descripcion,@RequestParam String direccion,
+                @RequestParam String email){                
 		//if (empresas != null)
 			empresasService.insertarEmpresas(empresas);
 		return "redirect:/listaEmpresas";

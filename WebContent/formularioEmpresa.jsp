@@ -23,14 +23,14 @@
     </div>
   	<div class="paraFormulario">
    	  <h1> Requisitos </h1>
-        
+          <form method="post" action="insertarEmpresas">
         <p> <input type="text" size="30" maxlength="50" name="rfc_curp" placeholder="RFC/Curp">
         </p>
         <p> <input type="text" size="30" maxlength="50" name="razon_social" placeholder="Razon social">
         </p>
         <p> <input type="text" size="30" maxlength="50"  name="nombre_comercial" placeholder="Nombre Comercial">
         </p>
-       	<p> <textarea name="descripcion ..." rows="8" cols="25"placeholder="Descripcion"></textarea>
+       	<p> <textarea name="descripcion" rows="8" cols="25"placeholder="Descripcion"></textarea>
        	</p>
        	<p> <input type="text" size="30" maxlength="50" name="direccion" placeholder="Direccion">
    	</p>
@@ -38,18 +38,18 @@
    	</p>
        	<p> <input type="text" size="30" maxlength="50" name="fax" placeholder="Fax">
    	</p>
-       	<p> <input type="text" size="30" maxlength="50" name="e-mail" placeholder="E-mail">
+       	<p> <input type="text" size="30" maxlength="50" name="email" placeholder="E-mail">
    	</p>
-       	<p> <input type="text" size="30" maxlength="50" name="nombre" placeholder="Sitio Web">
+       	<p> <input type="text" size="30" maxlength="50" name="sitioWEB" placeholder="Sitio Web">
    	  </p>
        	<p>
-  <input type="password" name="contrase�a" placeholder="Cree su password">
+  <input type="password" name="passwd1" placeholder="Cree su password">
    	  </p>
       <p>
-  <input type="password" name="contraseña" placeholder="Respita password">
+  <input type="password" name="passwd2" placeholder="Repita password">
   		</p>
     <button> Registrar </button>
-
+          </form>
     </div> 
     </div>
  <div id="footWrap">
