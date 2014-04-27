@@ -41,6 +41,7 @@
        	<p> <input type="text" size="30" maxlength="50" name="email" placeholder="E-mail">
    	</p>
        	<p> <input type="text" size="30" maxlength="50" name="sitioWEB" placeholder="Sitio Web">
+                 <input type="hidden" size="30" maxlength="50" value="A" name="status" placeholder="Sitio Web">
    	  </p>
        	<p>
   <input type="password" name="passwd1" placeholder="Cree su password">

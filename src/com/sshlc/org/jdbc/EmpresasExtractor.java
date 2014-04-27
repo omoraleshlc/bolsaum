@@ -19,8 +19,10 @@ public class EmpresasExtractor implements ResultSetExtractor<Empresas> {
 		empresas.setKeyEmp(resultSet.getInt("keyEmp"));
                 empresas.setReservado(resultSet.getString("reservado"));
                 empresas.setSector(resultSet.getString("sector"));
+                empresas.setRfc_curp(resultSet.getString("rfc_curp"));
 		empresas.setStatus(resultSet.getString("status"));
-		
+                empresas.setPassword(resultSet.getString("password"));
+		empresas.setStatus(resultSet.getString("status"));
 		return empresas;
 	}
 

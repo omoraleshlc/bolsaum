@@ -82,12 +82,31 @@ public class EmpresasController {
                 @RequestParam String rfc_curp,        @RequestParam String razon_social,
                 @RequestParam String nombre_comercial, 
                 @RequestParam String descripcion,@RequestParam String direccion,
-                @RequestParam String email){                
-		//if (empresas != null)
+                @RequestParam String email,
+                @RequestParam String passwd1,@RequestParam String passwd2){                
+		if (passwd1.equals(passwd2)){
 			empresasService.insertarEmpresas(empresas);
-		return "redirect:/listaEmpresas";
-	}
+		return "redirect:/getEmpresaSI";
+                }else{
+                    return "redirect:/empresaNovalida";
+                }
+        }
 
+        @RequestMapping("/getEmpresaSI")
+	public ModelAndView bienvenidaEmpresas() {
+		List<Empresas> empresasList = empresasService.getEmpresasList();
+ //           String map=null;
+		return new ModelAndView("bienvenidaEmpresas", "bienvenidaEmpresas", empresasList);
+	}
+        
+        @RequestMapping("/empresaNovalida")
+	public ModelAndView getEmpresaNO() {
+		List<Empresas> empresasList = empresasService.getEmpresasList();
+ //           String map=null;
+		return new ModelAndView("empresaNO", "empresaNO", empresasList);
+	}
+        
+        
 	@RequestMapping("/listaEmpresas")
 	public ModelAndView getEmpresasList() {
 		List<Empresas> empresasList = empresasService.getEmpresasList();

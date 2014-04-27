@@ -18,10 +18,46 @@ public class EmpresasDaoImpl implements EmpresasDao {
 	public void insertarEmpresas( Empresas empresas) {
 
            List<Empresas> empresasList = new ArrayList<Empresas>();
+/*	
+
+descripcion
+sector
+descripcionSector
+status
+reservado
+rfc_curp
+razon_social
+nombre_comercial
+direccion
+telefono
+fax
+email
+sitioWEB 
+*/           
            
-		String sqlC = "select * from empresas where keyEmp= '"+empresas.getKeyEmp()+"'";
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		empresasList = jdbcTemplate.query(sqlC, new EmpresasRowMapper());
+           //if(empresas.getPasswd1().equals(empresas.getPasswd2())){
+            String sql = "INSERT INTO empresas "
+				+ "(descripcion,descripcionSector, status, reservado,rfc_curp,"
+                    + "razon_social,nombre_comercial,direccion,telefono,"
+                    + "fax,email,sitioWEB,password) "
+                    + "VALUES "
+                    + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		
+            JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		jdbcTemplate.update(
+				sql,
+				new Object[] { empresas.getDescripcion(), empresas.getDescripcionSector(),
+						empresas.getStatus(),
+                                empresas.getReservado(),empresas.getRfc_curp(),
+                                empresas.getRazon_social(),empresas.getNombre_comercial(),
+                                empresas.getDireccion(),empresas.getTelefono(),
+                                empresas.getFax(),empresas.getEmail(),
+                                empresas.getSitioWEB(),empresas.getPasswd1()
+                                });
+           
+		//String sqlC = "select * from empresas where keyEmp= '"+empresas.getKeyEmp()+"'";
+		
+		//empresasList = jdbcTemplate.query(sqlC, new EmpresasRowMapper());
                 //System.out.println("usuario"+sqlC+empresasList.get(1)+empresas.getUsuario());
                 //System.out.println("s"+empresasList.get(0));
                 
@@ -50,7 +86,7 @@ public class EmpresasDaoImpl implements EmpresasDao {
             actor.setLastName(rs.getString("last_name"));
             return actor;
         }
-    };*/
+    };
 
     
     // notice the wrapping up of the argumenta in an array
@@ -60,19 +96,11 @@ public class EmpresasDaoImpl implements EmpresasDao {
                     System.out.println("ya existe eese usuario!");
                      
                 } else {
-                    
-                    String sql = "INSERT INTO empresas "
-				+ "(usuario,nombre, aPaterno, aMaterno,email) VALUES (?, ?, ?, ?, ?)";
-		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-
-		jdbcTemplate.update(
-				sql,
-				new Object[] { empresas.getDescripcion(), empresas.getDescripcionSector(),
-						empresas.getSector(),
-                                empresas.getStatus(),empresas.getReservado()
-                                });
-                }
+                   */
+                   
                 
+                
+                /*
                 String sql = "INSERT INTO empresas "
 				+ "(descripcion,sector, status) VALUES (?, ?, ?)";
 		//JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
@@ -81,7 +109,7 @@ public class EmpresasDaoImpl implements EmpresasDao {
 				sql,
 				new Object[] { empresas.getDescripcion(), empresas.getSector(),
 						"activo"
-                                });
+                                });*/
                 
         }
                 

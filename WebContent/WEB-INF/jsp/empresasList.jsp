@@ -18,10 +18,9 @@
 
 		<table class="table table-condensed table-hover">
                     <thead>
-				<td class="heading">#</td>
+				<td class="heading">RFC</td>
 				<td class="heading">Descripcion</td>
-				<td class="heading">Sector</td>
-				<td class="heading">status</td>
+				
                                 
                                 <td class="heading"></td>
                                 <td class="heading"></td>
@@ -29,11 +28,9 @@
 			</thead>
 			<c:forEach var="empresas" items="${empresasList}">
 				<tr>
-					<td>${empresas.keyEmp}</td>
+					<td>${empresas.rfc_curp}</td>
 					<td>${empresas.descripcion}</td>
-					<td>${empresas.sector}</td>
-                                        <td>${empresas.status}</td>
-                                       
+					
 					
                                         <td ><div align="right"><a href="editarEmpresas?keyEmp=${empresas.keyEmp}">Editar</a></div></td>
                                         <td ><div align="right"><a href="eliminarEmpresas?keyEmp=${empresas.keyEmp}">Eliminar</a></div></td>
