@@ -15,4 +15,6 @@ public interface EmpresasService {
 	public Empresas getEmpresas(Integer folio);
 
 	public void updateData(Empresas empresas);
+        
+        public void validarEmpresa(Empresas empresas,String rfc_curp);
 }

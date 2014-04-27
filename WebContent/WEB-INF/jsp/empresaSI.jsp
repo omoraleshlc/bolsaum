@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Clave Incorrecta</title>
+<title>Empresa Agregadar Correctamente</title>
 
 </head>
 <body>
@@ -14,8 +14,8 @@
 		<br />
 		<div>
                     <script>
-                        window.alert("EL RFC O PASSWORD NO DEBEN ESTAR VACIOS!!");
-                        window.location.href="formularioEmpresa.jsp"
+                        window.alert("Empresa Agregada correctamente, favor de validarse!!");
+                        window.location.href="empresas.jsp"
                         </script>
 		</div>
 	</center>

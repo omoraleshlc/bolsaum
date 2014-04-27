@@ -64,10 +64,15 @@ public class EmpresasController {
         public String entrada(@ModelAttribute Empresas empresas,@RequestParam String user,
                 @RequestParam String password
         ) {
+            String rfc_curp=user;
             if(user.isEmpty() || password.isEmpty()){
              return "redirect:/usuarioInvalido";
         }else{
-            return "redirect:/bienvenidaEmpresas.jsp";
+            //Validar Empresa
+            empresasService.validarEmpresa(empresas,rfc_curp);
+            
+            return "redirect:/validarEmpresa?user="+user;
+            
             }
         }
 
@@ -96,7 +101,7 @@ public class EmpresasController {
 	public ModelAndView bienvenidaEmpresas() {
 		List<Empresas> empresasList = empresasService.getEmpresasList();
  //           String map=null;
-		return new ModelAndView("bienvenidaEmpresas", "bienvenidaEmpresas", empresasList);
+		return new ModelAndView("empresaSI", "empresaSI", empresasList);
 	}
         
         @RequestMapping("/empresaNovalida")
@@ -106,6 +111,13 @@ public class EmpresasController {
 		return new ModelAndView("empresaNO", "empresaNO", empresasList);
 	}
         
+        
+        @RequestMapping("/validarEmpresa")
+	public String validarEmpresa(@ModelAttribute Empresas empresas,@RequestParam String user){
+ //           String map=null;
+		empresasService.validarEmpresa(empresas,user);
+        return "redirect:/bienvenidaEmpresas.jsp?user="+user;
+	}
         
 	@RequestMapping("/listaEmpresas")
 	public ModelAndView getEmpresasList() {

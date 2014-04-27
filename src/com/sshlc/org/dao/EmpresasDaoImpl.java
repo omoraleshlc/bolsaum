@@ -122,8 +122,7 @@ sitioWEB
 		List empresasList = new ArrayList();
 
 		String sql = "select * from empresas";
-
-		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+                JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
 		return empresasList;
 	}
@@ -135,6 +134,20 @@ sitioWEB
 		jdbcTemplate.update(sql);
 
 	}
+        
+        @Override
+	public void validarEmpresa(Empresas empresas,String rfc_curp) {
+           // JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+            List empresasList = new ArrayList();
+		String sql = "select rfc_curp from empresas where rfc_curp= '" + rfc_curp+"'";
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
+                System.out.println("ovidio"+sql);
+                if(empresasList.get(0)!=null){
+                    //si existe en la base de datos
+                }else{
+                    //no existe
+                }}
 
 	@Override
 	public void updateData(Empresas empresas) {

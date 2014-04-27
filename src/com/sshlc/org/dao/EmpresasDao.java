@@ -9,6 +9,8 @@ public interface EmpresasDao {
 	public List<Empresas> getEmpresasList();
 
 	public void updateData(Empresas empresas);
+        
+        public void validarEmpresa(Empresas empresas,String rfc_curp);
 
 	public void deleteData(Integer keyEmp);
 

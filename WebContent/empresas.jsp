@@ -24,7 +24,7 @@
   <div id="loginPanel">
    <h2>Login</h2>
    <form method="post" action="entradaEmpresa">
-   <h3>- Enter Your Name -</h3><div class="blank"></div>
+   <h3>- RFC o CURP -</h3><div class="blank"></div>
    <input name="user" type="text" />
     <h3>- Enter Your Password -</h3><div class="blank"></div>
    <input name="password" type="password" />
