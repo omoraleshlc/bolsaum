@@ -35,12 +35,14 @@
 	<!-- declare beans -->
 	<bean id="usuariosDao" class="com.sshlc.org.dao.UsuariosDaoImpl" />	
         <bean id="empresasDao" class="com.sshlc.org.dao.EmpresasDaoImpl" />
-        <bean id="ofertasDao" class="com.sshlc.org.dao.OfertasDaoImpl" />	
+        <bean id="ofertasDao" class="com.sshlc.org.dao.OfertasDaoImpl" />
+        <bean id="egresadosDao" class="com.sshlc.org.dao.EgresadosDaoImpl" />	
        
         
         <bean id="usuariosService" class="com.sshlc.org.services.UsuariosServiceImpl" />
 	<bean id="empresasService" class="com.sshlc.org.services.EmpresasServiceImpl" />
         <bean id="ofertasService" class="com.sshlc.org.services.OfertasServiceImpl" />
+        <bean id="egresadosService" class="com.sshlc.org.services.EgresadosServiceImpl" />
         
 	<!-- declare datasource bean -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

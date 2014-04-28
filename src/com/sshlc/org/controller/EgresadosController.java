@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import com.sshlc.org.domain.Empresas;
-import com.sshlc.org.services.EmpresasService;
+import com.sshlc.org.domain.Egresados;
+import com.sshlc.org.services.EgresadosService;
 
 import com.sshlc.org.domain.Usuarios;
 import com.sshlc.org.services.UsuariosService;
 
 
 @Controller
-public class EmpresasController {
+public class EgresadosController {
 
 	@Autowired
-	EmpresasService empresasService;
+	EgresadosService egresadosService;
         
         
         
         
         
 
-	@RequestMapping("/formaInsertarEmpresas")
-	public ModelAndView registerEmpresas(@ModelAttribute Empresas empresas) {
+	@RequestMapping("/formaInsertarEgresados")
+	public ModelAndView registerEgresados(@ModelAttribute Egresados egresados) {
 
 
                 List<String> sectorList = new ArrayList<String>();
@@ -56,20 +56,20 @@ public class EmpresasController {
 		Map<String, List> map = new HashMap<String, List>();
 		map.put("sectorList", sectorList);
                 
-		return new ModelAndView("agregarEmpresas", "map", map);
+		return new ModelAndView("agregarEgresados", "map", map);
 	}
         
         
-        @RequestMapping("/entradaEmpresa")
-        public String entrada(@ModelAttribute Empresas empresas,@RequestParam String user,
+        @RequestMapping("/entradaEgresado")
+        public String entrada(@ModelAttribute Egresados egresados,@RequestParam String user,
                 @RequestParam String password
         ) {
-            String rfc_curp=user;
+            String nombre=user;
             if(user.isEmpty() || password.isEmpty()){
              return "redirect:/usuarioInvalido";
         }else{
             //Validar Empresa
-            empresasService.validarEmpresa(empresas,rfc_curp);
+            //egresadosService.validarEgresado(egresados,nombre);
             
             return "redirect:/validarEmpresa?user="+user;
             
@@ -82,15 +82,13 @@ public class EmpresasController {
                 @RequestParam String direccion,       @RequestParam String e-mail,
                 @RequestParam String sitioWEB */
         
-	@RequestMapping("/insertarEmpresas")
-	public String insertData(@ModelAttribute Empresas empresas,
-                @RequestParam String rfc_curp,        @RequestParam String razon_social,
-                @RequestParam String nombre_comercial, 
-                @RequestParam String descripcion,@RequestParam String direccion,
-                @RequestParam String email,
+	@RequestMapping("/insertarEgresados")
+	public String insertData(@ModelAttribute Egresados egresados,
+                @RequestParam String nombre,
+                @RequestParam String email1,@RequestParam String email2,
                 @RequestParam String passwd1,@RequestParam String passwd2){                
 		if (passwd1.equals(passwd2)){
-			empresasService.insertarEmpresas(empresas);
+			egresadosService.insertarEgresados(egresados);
 		return "redirect:/getEmpresaSI";
                 }else{
                     return "redirect:/empresaNovalida";
@@ -98,40 +96,40 @@ public class EmpresasController {
         }
 
         @RequestMapping("/getEmpresaSI")
-	public ModelAndView bienvenidaEmpresas() {
-		List<Empresas> empresasList = empresasService.getEmpresasList();
+	public ModelAndView bienvenidaEgresados() {
+		List<Egresados> egresadosList = egresadosService.getEgresadosList();
  //           String map=null;
-		return new ModelAndView("empresaSI", "empresaSI", empresasList);
+		return new ModelAndView("empresaSI", "empresaSI", egresadosList);
 	}
         
         @RequestMapping("/empresaNovalida")
 	public ModelAndView getEmpresaNO() {
-		List<Empresas> empresasList = empresasService.getEmpresasList();
+		List<Egresados> egresadosList = egresadosService.getEgresadosList();
  //           String map=null;
-		return new ModelAndView("empresaNO", "empresaNO", empresasList);
+		return new ModelAndView("empresaNO", "empresaNO", egresadosList);
 	}
         
         
-        @RequestMapping("/validarEmpresa")
-	public String validarEmpresa(@ModelAttribute Empresas empresas,@RequestParam String user){
+        @RequestMapping("/validarEgresado")
+	public String validarEgresado(@ModelAttribute Egresados egresados,@RequestParam String user){
  //           String map=null;
-		empresasService.validarEmpresa(empresas,user);
-        return "redirect:/bienvenidaEmpresas.jsp?user"+user;
+		//egresadosService.validarEgresado(egresados,user);
+        return "redirect:/bienvenidaEgresados.jsp?user"+user;
 	}
         
-	@RequestMapping("/listaEmpresas")
-	public ModelAndView getEmpresasList() {
-		List<Empresas> empresasList = empresasService.getEmpresasList();
+	@RequestMapping("/listaEgresados")
+	public ModelAndView getEgresadosList() {
+		List<Egresados> egresadosList = egresadosService.getEgresadosList();
  //           String map=null;
-		return new ModelAndView("empresasList", "empresasList", empresasList);
+		return new ModelAndView("egresadosList", "egresadosList", egresadosList);
 	}
 
-	@RequestMapping("/editarEmpresas")
-	public ModelAndView editEmpresas(@RequestParam int keyEmp,
-			@ModelAttribute Empresas empresas) {
+	@RequestMapping("/editarEgresados")
+	public ModelAndView editEgresados(@RequestParam int keyEmp,
+			@ModelAttribute Egresados egresados) {
 
-		//empresas = empresasService.getEmpresas(folio);
-                String descripcion = empresas.getDescripcion();
+		//egresados = egresadosService.getEgresados(folio);
+                String descripcion = egresados.getNombre();
 		List<String> genderList = new ArrayList<String>();
 		genderList.add("male");
 		genderList.add("female");
@@ -156,22 +154,22 @@ public class EmpresasController {
 		//map.put("usuarios", usuarios);
                 map.put("estado", estadoList);
 
-		return new ModelAndView("editarEmpresas", "map", map);
+		return new ModelAndView("editarEgresados", "map", map);
 
 	}
 
-	@RequestMapping("/actualizarEmpresas")
-	public String updateEmpresas(@ModelAttribute Empresas empresas) {
-		empresasService.updateData(empresas);
-		return "redirect:/listaEmpresas";
+	@RequestMapping("/actualizarEgresados")
+	public String updateEgresados(@ModelAttribute Egresados egresados) {
+		egresadosService.updateData(egresados);
+		return "redirect:/listaEgresados";
 
 	}
 
-	@RequestMapping("/eliminaEmpresas")
-	public String eliminaEmpresas(@RequestParam int folio) {
+	@RequestMapping("/eliminaEgresados")
+	public String eliminaEgresados(@RequestParam int folio) {
 		System.out.println("folio = " + folio);
-		empresasService.deleteData(folio);
-		return "redirect:/listaEmpresas";
+		egresadosService.deleteData(folio);
+		return "redirect:/listaEgresados";
 	}
 }
 

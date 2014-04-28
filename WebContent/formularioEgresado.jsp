@@ -27,7 +27,7 @@
   	<div class="paraFormulario">
    	  <h1> Registrate</h1>
    	  <p>&nbsp;</p>
-        
+          <form method="post" action="insertarEgresado">
         <p>
         <input type="text" size="40" maxlength="50" name="rfc_curp" placeholder="Nombre">
         </p>
@@ -44,7 +44,7 @@
   <input type="password" name="contrase�a" placeholder="Repita su password">
   		</p>
     <button> Registrar </button>
-
+          </form>
     </div> 
     </div>
  <div id="footWrap">

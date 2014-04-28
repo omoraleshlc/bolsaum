@@ -142,12 +142,8 @@ sitioWEB
 		String sql = "select rfc_curp from empresas where rfc_curp= '" + rfc_curp+"'";
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
-                System.out.println("ovidio"+sql);
-                if(empresasList.get(0)!=null){
-                    //si existe en la base de datos
-                }else{
-                    //no existe
-                }}
+                //return empresasList;
+        }
 
 	@Override
 	public void updateData(Empresas empresas) {
@@ -161,7 +157,7 @@ sitioWEB
                         + "aPaterno = ?,"
                         + "aMaterno = ? ,"
                         + "email = ?"
-                        + "  where folio = ? ";
+                        + "where folio = ? ";
     	
                 //System.out.println("step"+empresas.getNombre());
 		jdbcTemplate.update(
