@@ -13,8 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.sshlc.org.domain.Egresados;
 import com.sshlc.org.services.EgresadosService;
 
-import com.sshlc.org.domain.Usuarios;
-import com.sshlc.org.services.UsuariosService;
 
 
 @Controller
@@ -68,10 +66,10 @@ public class EgresadosController {
             if(user.isEmpty() || password.isEmpty()){
              return "redirect:/usuarioInvalido";
         }else{
-            //Validar Empresa
+            //Validar egresados
             //egresadosService.validarEgresado(egresados,nombre);
             
-            return "redirect:/validarEmpresa?user="+user;
+            return "redirect:/validaregresados?user="+user;
             
             }
         }
@@ -89,24 +87,24 @@ public class EgresadosController {
                 @RequestParam String passwd1,@RequestParam String passwd2){                
 		if (passwd1.equals(passwd2)){
 			egresadosService.insertarEgresados(egresados);
-		return "redirect:/getEmpresaSI";
+		return "redirect:/getegresadosSI";
                 }else{
-                    return "redirect:/empresaNovalida";
+                    return "redirect:/EgresadosNovalida";
                 }
         }
 
-        @RequestMapping("/getEmpresaSI")
+        @RequestMapping("/getegresadosSI")
 	public ModelAndView bienvenidaEgresados() {
 		List<Egresados> egresadosList = egresadosService.getEgresadosList();
  //           String map=null;
-		return new ModelAndView("empresaSI", "empresaSI", egresadosList);
+		return new ModelAndView("EgresadosSI", "EgresadosSI", egresadosList);
 	}
         
-        @RequestMapping("/empresaNovalida")
-	public ModelAndView getEmpresaNO() {
+        @RequestMapping("/EgresadosNovalida")
+	public ModelAndView getegresadosNO() {
 		List<Egresados> egresadosList = egresadosService.getEgresadosList();
  //           String map=null;
-		return new ModelAndView("empresaNO", "empresaNO", egresadosList);
+		return new ModelAndView("EgresadosNO", "EgresadosNO", egresadosList);
 	}
         
         
