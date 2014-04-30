@@ -29,7 +29,7 @@
             
             
             
-            <form action="insertarOfertas" method="post">            
+            <form action="http://localhost/registrarOferta.php" method="post">            
             <div class="paraFormulario">
    	  <h1> Registro de Ofertas de trabajo</h1>
       <p class="letras1"> DATOS GENERALES DE LA EMPRESA O INSTITUCION </p>
@@ -65,10 +65,10 @@
       </p>
         
         <p> 
-        <input type="text" size="40" maxlength="50"  name="nombre_comercial" placeholder="DIRECCION">
+        <input type="text" size="40" maxlength="50"  name="direccion" placeholder="DIRECCION">
         </p>
        	<p> 
-        <input type="text" size="40" maxlength="50" name="direccion" placeholder="PAGINA WEB">
+        <input type="text" size="40" maxlength="50" name="pagina_web" placeholder="PAGINA WEB">
         </p>
         
         <p class="letras1"> DATOS DE LA VACANTE</p>

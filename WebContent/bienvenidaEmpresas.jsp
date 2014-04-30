@@ -7,7 +7,7 @@
   <link rel="icon" href="images/icon.ico" />
   <link href="principal/html/stylesbienvenidaEmpresa.css" rel="stylesheet" type="text/css" />
   </head>
-    
+  <% if(request.getParameter("user")!=null && request.getParameter("password")!=null){%>  
   <body>
   	<div class="contenedor">
     <div class="columnaIzq">
@@ -67,6 +67,13 @@
    </ul>
   </div>
  </div>
+     <% }else{ %>
+     <script>
+
+window.location.href="http://localhost:8080/bolsaum/empresas.jsp";
+
+</script>
+     <% } %>
   </body>
 </html>
 </div>

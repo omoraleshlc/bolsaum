@@ -23,7 +23,8 @@
   </div>
   <div id="loginPanel">
    <h2>Login</h2>
-   <form method="post" action="entradaEmpresa">
+   
+   <form method="post" action="http://localhost/entradaEmpresa.php">
    <h3>- RFC o CURP -</h3><div class="blank"></div>
    <input name="user" type="text" />
     <h3>- Enter Your Password -</h3><div class="blank"></div>
