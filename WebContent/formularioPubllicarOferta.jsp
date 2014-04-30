@@ -82,7 +82,7 @@
         <input type="text" size="40" maxlength="50" name="prestaciones" placeholder="PRESTACIONES">
    	  	</p>
        	<p> 
-        <input type="text" size="40" maxlength="50" name="horario/jornada" placeholder="HORARIO/JORNADA">
+        <input type="text" size="40" maxlength="50" name="horario_jornada" placeholder="HORARIO/JORNADA">
   	  	</p>
        	<p> 
         <input type="text" size="40" maxlength="50" name="numero_de_vacantes" placeholder="NUMERO DE VACANTES">
@@ -96,7 +96,7 @@
             </select>
    	  	</p>
         <p> 
-        <textarea name="descripcion" rows="10" cols="25" placeholder="DESCRIPCION DE LA OFERTA(ACTIVIDADES,FUNCIONES,RESPONSABILIDADES)"></textarea>
+        <textarea name="descripcionEmpleo" rows="10" cols="25" placeholder="DESCRIPCION DE LA OFERTA(ACTIVIDADES,FUNCIONES,RESPONSABILIDADES)"></textarea>
        	</p>
         <p class="letras1"> REQUISITOS </p>
         
@@ -115,7 +115,7 @@
   	  	</p>
         
        	<p> 
-<textarea name="descripcion" rows="10" cols="25" placeholder="EXPERIENCIA"></textarea>   	  
+<textarea name="experiencia" rows="10" cols="25" placeholder="EXPERIENCIA"></textarea>   	  
 		</p>
         
        	<p> 
@@ -133,7 +133,7 @@
         <p class="letras1">DATOS DE PERSONAL DE CONTACTO DENTRO DE LA EMPRESA</p>
         
        	<p> 
-        <input type="text" size="40" maxlength="50" name="nombre" placeholder="NOMBRE">
+        <input type="text" size="40" maxlength="50" name="nombre_contacto" placeholder="NOMBRE">
    	  	</p>
         
        	<p> 
@@ -149,7 +149,7 @@
    	  	</p>
         
        	<p> 
-        <input type="text" size="40" maxlength="50" name="e-mail" placeholder="E-MAIL">
+        <input type="text" size="40" maxlength="50" name="e_mail" placeholder="E-MAIL">
    	  	</p>
 
 

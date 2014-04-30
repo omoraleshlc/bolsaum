@@ -29,16 +29,16 @@
    	  <p>&nbsp;</p>
           <form method="post" action="insertarEgresado">
         <p>
-        <input type="text" size="40" maxlength="50" name="rfc_curp" placeholder="Nombre">
+        <input type="text" size="40" maxlength="50" name="nombre" placeholder="Nombre">
         </p>
         <p> 
-          <input type="text" size="40" maxlength="50" name="razon_social" placeholder="Correo">
+          <input type="text" size="40" maxlength="50" name="correo" placeholder="Correo">
         </p>
         <p>
-          <input type="text" size="40" maxlength="50" name="nombre_comercial" placeholder="Confirmar Correo">
+          <input type="text" size="40" maxlength="50" name="confirmar_correo" placeholder="Confirmar Correo">
         </p>
         <p>
-          <input type="password" name="contrase�a" placeholder="password">
+          <input type="password" name="password" placeholder="password">
  	  </p>
         <p>
   <input type="password" name="contrase�a" placeholder="Repita su password">
