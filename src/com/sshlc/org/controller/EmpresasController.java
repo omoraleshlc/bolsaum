@@ -59,18 +59,19 @@ public class EmpresasController {
         
         
         @RequestMapping("/entradaEmpresa")
-        public String entrada(@ModelAttribute Empresas empresas,@RequestParam String user,
-                @RequestParam String password
-        ) {
+        public String entradaEmpresa(@ModelAttribute Empresas empresas,@RequestParam String user,
+            @RequestParam String password) {
             String rfc_curp=user;
+            
             if(user.isEmpty() || password.isEmpty()){
-             return "redirect:/usuarioInvalido";
-        }else{
+            return "redirect:/usuarioInvalido";
+            }else{
             //Validar Empresa
-            empresasService.validarEmpresa(empresas,rfc_curp);
-            
-            return "redirect:/validarEmpresa?user="+user;
-            
+            empresasService.getEmpresas(rfc_curp);
+            //System.out.println("ivud"+empresas.getSector());
+            //System.out.println(empresasService.validarEmpresa(rfc_curp,password));
+            System.out.println("aqui"+empresas.getRfc_curp());
+            return "redirect:/bienvenidaEmpresas.jsp?user="+user;            
             }
         }
 
@@ -113,7 +114,7 @@ public class EmpresasController {
         @RequestMapping("/validarEmpresa")
 	public String validarEmpresa(@ModelAttribute Empresas empresas,@RequestParam String user){
  //           String map=null;
-		empresasService.validarEmpresa(empresas,user);
+		//empresasService.validarEmpresa(empresas,user);
         return "redirect:/bienvenidaEmpresas.jsp?user"+user;
 	}
         

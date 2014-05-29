@@ -28,8 +28,8 @@ public class EmpresasServiceImpl implements EmpresasService {
 	}
 
 	@Override
-	public Empresas getEmpresas(Integer folio) {
-		return empresasdao.getEmpresas(folio);
+	public Empresas getEmpresas(String rfc_curp) {
+		return empresasdao.getEmpresas(rfc_curp);
 	}
 
         
@@ -41,10 +41,6 @@ public class EmpresasServiceImpl implements EmpresasService {
 	}
 
         
-	@Override
-	public void validarEmpresa(Empresas empresas,String rfc_curp) {
-		empresasdao.validarEmpresa(empresas,rfc_curp);
-		
-	}
+	
 	
 }

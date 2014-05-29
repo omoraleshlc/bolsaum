@@ -10,10 +10,10 @@ public interface EmpresasDao {
 
 	public void updateData(Empresas empresas);
         
-        public void validarEmpresa(Empresas empresas,String rfc_curp);
+        //public void validarEmpresa(Empresas empresas,String rfc_curp);
 
 	public void deleteData(Integer keyEmp);
 
-	public Empresas getEmpresas(Integer keyEmp);
+	public Empresas getEmpresas(String rfc_curp);
 
 }

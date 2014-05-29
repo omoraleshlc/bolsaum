@@ -12,9 +12,9 @@ public interface EmpresasService {
 
 	public void deleteData(Integer folio);
 
-	public Empresas getEmpresas(Integer folio);
+	public Empresas getEmpresas(String rfc_curp);
 
 	public void updateData(Empresas empresas);
         
-        public void validarEmpresa(Empresas empresas,String rfc_curp);
+      
 }

@@ -135,7 +135,7 @@ sitioWEB
 
 	}
         
-        @Override
+        /*@Override
 	public void validarEmpresa(Empresas empresas,String rfc_curp) {
            // JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
             List empresasList = new ArrayList();
@@ -143,7 +143,7 @@ sitioWEB
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
                 //return empresasList;
-        }
+        }*/
 
 	@Override
 	public void updateData(Empresas empresas) {
@@ -173,12 +173,16 @@ sitioWEB
         
         
 	@Override
-	public Empresas getEmpresas(Integer folio) {
+	public Empresas getEmpresas(String rfc_curp) {
 		List<Empresas> empresasList = new ArrayList<Empresas>();
-		String sql = "select * from empresas where folio= " + folio;
+		String sql = "select * from empresas where rfc_curp='"+rfc_curp+"'  ";
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 		empresasList = jdbcTemplate.query(sql, new EmpresasRowMapper());
+                
 		return empresasList.get(0);
 	}
+        
+        
+     
 
 }
